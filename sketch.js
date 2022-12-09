@@ -1,19 +1,23 @@
 var song;
 var button;
+var button2;
 var t=0;
 var amp;
 //배경
 function setup(){
     createCanvas(640,480);
     song = loadSound('ANL.mp3', loaded);
-    button = createButton('play');
+    button = createButton('ANL');
+    button.mousePressed(togglePlaying);
+
+    song = loadSound('back2u.mp3', loaded);
+    button2 = createButton('back2u');
     button.mousePressed(togglePlaying);
     background(51);
-    amp = new p5.Amplitude();
 }
 
 //플레이하는거
-function togglePlaying(){
+function togglePlaying(){t;tt
     if (!song.isPlaying()){
         song.play();
         song.jump(80);
